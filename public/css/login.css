@@ -1,0 +1,364 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f4;
+    color: #222;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    height: 80px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* LOGO */
+
+.logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+}
+
+
+/* CADASTRO DO TOPO */
+
+.cadastro-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+}
+
+.cadastro-topo a {
+    color: #2f7d32;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.cadastro-topo a:hover {
+    text-decoration: underline;
+}
+
+
+/* PRINCIPAL */
+
+.principal {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    flex: 1;
+}
+
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    padding: 20px;
+}
+
+.titulo-pequeno {
+    color: #2f7d32;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.apresentacao h1 {
+    font-size: 46px;
+
+    line-height: 1.1;
+
+    margin: 18px 0;
+
+    color: #173b1c;
+}
+
+.apresentacao p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    max-width: 500px;
+}
+
+
+/* LOGIN */
+
+.login {
+    width: 100%;
+}
+
+.caixa-login {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.caixa-login h2 {
+    font-size: 30px;
+
+    color: #173b1c;
+
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #333;
+}
+
+
+/* INPUT E SELECT */
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    background: white;
+
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #2f7d32;
+
+    box-shadow: 0 0 0 2px rgba(47, 125, 50, 0.12);
+}
+
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2f7d32;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #256528;
+}
+
+
+/* CRIAR CONTA */
+
+.criar-conta {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+.criar-conta a {
+    color: #2f7d32;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    background: #111;
+
+    color: white;
+
+    padding: 35px 7% 20px;
+
+    margin-top: auto;
+}
+
+.rodape-conteudo {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.rodape h3 {
+    margin-bottom: 10px;
+
+    color: #fff;
+}
+
+.rodape p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid #333;
+
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .principal {
+        grid-template-columns: 1fr;
+
+        margin: 40px auto;
+
+        gap: 30px;
+    }
+
+    .apresentacao {
+        text-align: center;
+    }
+
+    .apresentacao h1 {
+        font-size: 36px;
+    }
+
+    .apresentacao p {
+        margin: auto;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cabecalho {
+        padding: 0 20px;
+    }
+
+    .cadastro-topo span {
+        display: none;
+    }
+
+    .principal {
+        width: 94%;
+    }
+
+    .caixa-login {
+        padding: 25px;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}

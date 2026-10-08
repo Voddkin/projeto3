@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Nativus</title>
+
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <div class="logo">
+            <img src="/img/logo-nativus-login.png" alt="Logo Nativus">
+        </div>
+
+        <div class="cadastro-topo">
+            <span>Não possui uma conta?</span>
+            <a href="/cadastro">Cadastrar</a>
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="principal">
+
+        <section class="apresentacao">
+
+            <span class="titulo-pequeno">
+                BEM-VINDO À NATIVUS
+            </span>
+
+            <h1>
+                Cuide de você de forma natural.
+            </h1>
+
+            <p>
+                Entre na sua conta para acessar a Nativus
+                e aproveitar todos os nossos produtos.
+            </p>
+
+        </section>
+
+
+        <!-- FORMULÁRIO -->
+        <section class="login">
+
+            <div class="caixa-login">
+
+                <h2>Entrar</h2>
+
+                <p class="subtitulo">
+                    Acesse sua conta
+                </p>
+
+                <form>
+
+                    <!-- E-MAIL -->
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- TIPO DE USUÁRIO -->
+                    <div class="campo">
+
+                        <label for="tipo">
+                            Entrar como
+                        </label>
+
+                        <select id="tipo" name="tipo" required>
+
+                            <option value="">
+                                Selecione uma opção
+                            </option>
+
+                            <option value="/funcionario">
+                                Funcionário
+                            </option>
+
+                            <option value="/loja">
+                                Sócio
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- BOTÃO -->
+                    <button type="submit">
+                        Entrar
+                    </button>
+
+                </form>
+
+
+                <div class="criar-conta">
+
+                    <span>
+                        Ainda não possui uma conta?
+                    </span>
+
+                    <a href="/cadastro">
+                        Cadastre-se
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div>
+                <h3>Nativus</h3>
+                <p>
+                    Produtos naturais para o seu bem-estar.
+                </p>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+
+                <p>
+                    contato@nativus.com.br
+                </p>
+
+                <p>
+                    (18) 99999-9999
+                </p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Nativus. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+
+    <!-- REDIRECIONAMENTO -->
+    <script>
+
+        const formulario = document.querySelector("form");
+
+        formulario.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const tipo = document.getElementById("tipo").value;
+
+            if (tipo === "/funcionario") {
+
+                window.location.href = "/funcionario";
+
+            }
+
+            else if (tipo === "/loja") {
+
+                window.location.href = "/loja";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        <%= typeof titulo !== "undefined" ? titulo : "Nativus" %>
+    </title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
+
+        <div class="container">
+
+
+            <!-- LOGO -->
+
+            <a
+                class="navbar-brand"
+                href="/"
+            >
+
+                <img
+                    src="/img/logo-nativus-login.png"
+                    alt="Nativus"
+                    width="150"
+                    height="50"
+                >
+
+            </a>
+
+
+            <!-- BOTÃO MENU MOBILE -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- BOTÕES -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="menuPrincipal"
+            >
+
+                <div class="ms-auto d-flex gap-2">
+
+
+                    <!-- LOGIN -->
+
+                    <a
+                        href="/login"
+                        class="btn btn-outline-light"
+                    >
+
+                        <i class="bi bi-box-arrow-in-right"></i>
+
+                        Login
+
+                    </a>
+
+
+                    <!-- CADASTRAR -->
+
+                    <a
+                        href="/cadastro"
+                        class="btn btn-warning"
+                    >
+
+                        <i class="bi bi-person-plus"></i>
+
+                        Cadastrar
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ========================= -->
+    <!-- CONTEÚDO DA PÁGINA -->
+    <!-- ========================= -->
+
+    <main class="flex-grow-1">
+
+        <%- body %>
+
+    </main>
+
+
+
+    <!-- ========================= -->
+    <!-- RODAPÉ -->
+    <!-- ========================= -->
+
+    <footer class="bg-dark text-white mt-5">
+
+        <div class="container py-5">
+
+            <div class="row g-4">
+
+
+                <!-- NATIVUS -->
+
+                <div class="col-md-4">
+
+                    <h5 class="fw-bold">
+
+                        <i class="bi bi-leaf"></i>
+
+                        Nativus
+
+                    </h5>
+
+                    <p class="text-white-50">
+
+                        Sua loja de produtos naturais,
+                        qualidade e confiança para você.
+
+                    </p>
+
+                </div>
+
+
+                <!-- LINKS -->
+
+                <div class="col-md-4">
+
+                    <h5 class="fw-bold">
+                        Links rápidos
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+
+                            <a
+                                href="/login"
+                                class="text-white-50 text-decoration-none"
+                            >
+
+                                <i class="bi bi-box-arrow-in-right"></i>
+
+                                Login
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="/cadastro"
+                                class="text-white-50 text-decoration-none"
+                            >
+
+                                <i class="bi bi-person-plus"></i>
+
+                                Cadastrar
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTATO -->
+
+                <div class="col-md-4">
+
+                    <h5 class="fw-bold">
+                        Contato
+                    </h5>
+
+                    <p class="text-white-50 mb-2">
+
+                        <i class="bi bi-envelope"></i>
+
+                        contato@nativus.com.br
+
+                    </p>
+
+
+                    <p class="text-white-50 mb-2">
+
+                        <i class="bi bi-telephone"></i>
+
+                        (18) 99999-9999
+
+                    </p>
+
+
+                    <p class="text-white-50 mb-2">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Presidente Bernardes - SP
+
+                    </p>
+
+
+                    <p class="text-white-50">
+
+                        <i class="bi bi-clock"></i>
+
+                        Segunda a sexta: 08h às 18h
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr class="border-secondary">
+
+
+            <!-- COPYRIGHT -->
+
+            <div class="text-center text-white-50">
+
+                <small>
+
+                    © <%= new Date().getFullYear() %>
+                    Nativus.
+                    Todos os direitos reservados.
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+
+</body>
+
+</html>
